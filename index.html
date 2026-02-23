@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday My Love ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(-45deg,#ff758c,#ff7eb3,#ffb199,#ff6a88);
+    background-size:400% 400%;
+    animation: gradient 12s ease infinite;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    overflow-x:hidden;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    padding:20px;
+    max-width:900px;
+}
+
+h1{
+    font-size:3rem;
+    font-family:'Great Vibes', cursive;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    font-size:1rem;
+    background:white;
+    color:#ff4b7d;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ff4b7d;
+    color:white;
+}
+
+.letter{
+    display:none;
+    margin-top:30px;
+    background:rgba(255,255,255,0.15);
+    padding:30px;
+    border-radius:15px;
+    backdrop-filter: blur(12px);
+    text-align:left;
+    line-height:1.7;
+}
+
+.music-control{
+    margin-top:20px;
+    text-align:center;
+}
+
+.final-love{
+    margin-top:30px;
+    text-align:center;
+    font-size:1.2rem;
+    font-weight:500;
+}
+
+.heart{
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:red;
+    transform:rotate(45deg);
+    animation: float 6s infinite;
+}
+
+.heart::before,
+.heart::after{
+    content:'';
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:red;
+    border-radius:50%;
+}
+
+.heart::before{
+    top:-10px;
+    left:0;
+}
+
+.heart::after{
+    left:-10px;
+    top:0;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh) rotate(45deg); opacity:1;}
+    100%{transform:translateY(-10vh) rotate(45deg); opacity:0;}
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Happy Birthday My Love ❤️</h1>
+    <button onclick="showLetter()">Click Here</button>
+
+    <div class="letter" id="letter">
+
+<p>
+We lived under the same sky,<br>
+counted the same seasons,<br>
+breathed the same monsoon air<br>
+yet never shared a moment.<br><br>
+
+I learned you through midnight messages,<br>
+through confessions typed slowly,<br>
+as if honesty needed courage<br>
+even behind a screen.<br><br>
+
+You were not a stranger,<br>
+and not a memory either —<br>
+you were somewhere in between,<br>
+close enough to feel real,<br>
+far enough to never arrive.<br><br>
+
+I fell in love without permission,<br>
+without proof, without a face to hold onto.<br>
+I loved your thoughts, your silences,<br>
+the way your words knew how to stay.<br><br>
+
+Sometimes I wonder<br>
+how many streets stood between us,<br>
+how many buses passed carrying you<br>
+while I remained still.<br><br>
+
+It hurts more knowing<br>
+distance was not the enemy —<br>
+fear was.<br>
+Timing was.<br>
+Maybe choice.<br><br>
+
+We never met,<br>
+yet you changed me.<br>
+We never touched,<br>
+yet you stayed.<br><br>
+
+and that is the most beautiful part <br>
+loving someone <br>
+who felt like home <br>
+before we meet.
+</p>
+
+<div class="final-love">
+And even after all of this…<br>
+I still love you.<br>
+I love you so much more than distance,<br>
+more than fear,<br>
+more than timing.<br><br>
+Happy Birthday, my love. ❤️
+</div>
+
+<!-- YouTube Romantic Music Embed -->
+<div class="music-control">
+    <p>Click play for romantic background music 🎶</p>
+    <iframe
+        width="100%"
+        height="200"
+        src="https://www.youtube.com/embed/DF3XjEhJ40Y?controls=1&autoplay=0"
+        title="Indila - Love Story (Official Music Video)"
+        frameborder="0"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+
+function showLetter(){
+    document.getElementById("letter").style.display = "block";
+}
+
+function createHeart(){
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
+}
+
+setInterval(createHeart,300);
+
+</script>
+
+</body>
+</html>
